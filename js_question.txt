@@ -1,0 +1,773 @@
+1. D = ”hello world ” ;
+Output = hello world;
+Answer - console.log('hello world');
+
+2. D = ”hello world” ;
+Output = “world hello”
+
+3. D = "H W H W H";
+Output = count of H:3
+Answer - let cnt=0;
+	for(let i of D){
+    	if(i === 'H'){
+        cnt++;
+    }
+}
+console.log(“count of H: “+cnt++)
+
+4.  D =”abc xyz”;
+            Output = 7
+	Answer- console.log(D.length);
+
+5.  D = “abcd xyz abc”;
+      Output =[“abcd”,”xyz”,”abc”]
+      Answer - console.log(D.split(" "));
+
+6.  D=” abcd xyz”;
+            Output = [“abcd”, “ abcd “,”abcd”,”xyz”,“xyz”]
+	Answer - let D="abcd xyz";
+            
+let str=D.split(" ");
+let arr=[]
+
+for(let i=0;i<str.length;i++){
+    let j=i;
+    while((j+1)<=3){
+        arr.push(str[i]);
+        j++;
+    }
+}
+console.log(arr);
+
+7.  Output = 122333444455555* 
+	Answer - let str="";
+for(let i=1;i<=5;i++){
+    str+=i.toString().repeat(i);
+}
+console.log(str);
+
+
+
+ 8.  D =”1,2,3,4” 
+            Output = [4,3,2,1]
+	Answer - console.log(D.split(",").reverse())
+
+9. Data = 2 or 4;
+      Output= 16
+	Answer - let num=prompt("enter a number");
+if(num==2){
+    console.log(Math.pow(num,4));
+}
+else{
+    console.log(Math.pow(num,2))
+}
+
+
+10. Output = 1 2 3 4 5 6 ……….10 
+	Answer - for(let i=1;i<=10;i++){
+    console.log(i);
+}
+
+11. Output= 1 4 9 16 25
+	Answer - for(let i=1;i<=5;i++){
+    console.log(i*i);
+}
+
+12. Output = 10 9 8 7 6 5 4 3 2 1
+	Answer - for(let i=10;i>0;i--){
+    console.log(i)
+}
+
+13. Output = 10 1 9 2 8 3 7 4 6 5 …………..1 10
+	Answer - for(let i=10,j=1 ; i>=1 && j<=10 ;i--,j++){
+    console.log(i+" "+j);
+}
+
+14. Output = 111 222 111 222……..
+	Answer - let a=prompt('enter a number');
+for(let i=0;i<a;i++){
+    console.log('111 222');
+}
+
+
+
+
+
+
+
+15. D =[123,456,789]
+             Output = index of 789
+	Answer - for(let i=0;i<D.length;i++){
+   		 if(D[i]===789){
+        		console.log(i);
+   		 }
+}
+
+16. D = [ ];
+             Output = index of 1 		
+
+17. D =[‘a’,’b’,’c’,’d’]
+              Output= abcd
+	Answer - let arr=['a','b','c','d'];
+let str=arr.join("");
+console.log(str);
+
+
+18 D =[hello, softops]
+//              Output= hello world softops.
+	Answer -  console.log(D[0]+” world”+ D[1]);
+
+ 19. D =[1,2,7,6]						
+             Output= [1,4,343,1296]
+	Answer - D.map((ele,index)=>D[index] =  Math.pow(ele,(index + 1)));
+console.log(D);
+
+
+       20. D =[1,’a’,3,’b’]						
+             Output= [1,3] [‘a’,’b’]
+	Answer - let num=[],alp=[];
+for(let i=0;i<D.length;i++){
+    if(typeof D[i]==='number'){
+        num.push(D[i]);
+    }
+    else{
+        alp.push(D[i]);
+    }
+}
+
+console.log(num);
+console.log(alp);
+
+
+       21. D = [1,2,3,4,5]						
+              Output = [5,2,3,4,1]     
+Answer - [D[0], D[D.length - 1]] = [D[D.length - 1], D[0]];
+console.log(D);
+
+
+
+       22. D=[1,2,3,4,5,6]					
+             Output = sum of number’s
+Answer - 	let sum=0;
+for(let i of D){
+    	sum+=i;
+} console.log(sum);
+
+
+        23. [2,2,2,1,1,1]   					
+          Output = count of 2
+	Answer - let cnt=0;
+for(let i of D){
+   		 if(i==2) cnt++;
+}
+console.log("count of 2 : "+cnt);
+
+	
+        24. [0,1,0,1,0,1]						
+            Output= [1,1,1,0,0,0]
+	Answer- D.sort((a, b) => (a > b ? -1 : 1))
+  console.log(D);
+
+        25. [1,2,3,4,5] [6,7,8,9]					
+            Output = [9,8,7,6,5,4,3,2,1]
+	Answer - let a=[1,2,3,4,5],b=[6,7,8,9];				
+b=b.reverse().concat(a.reverse());
+console.log(b);
+
+ 26. [1,2,3,4,5]  [6,7,8]			
+           Output [1,2,3,4,5,6,7,8] 
+	Answer - let a=[1,2,3,4,5],b=[6,7,8,9];				
+b=b.concat(a);
+console.log(b);
+
+
+
+        27. [3,9,6,10] =>[10,6,9,3]
+	   let d=[3,9,6,10];
+		d.reverse();
+		console.log(d);
+
+28. [2,1,2,1,1,2] => [1,1,1,2,2,2]
+	Let d=[2,1,2,1,1,2]
+	d.sort();
+	console.log(d);
+
+29. [1,2,3,4,5] => +2 adding = [3,4,5,6,7]
+	Answer - d.map((element,index)=>d[index]=element+2);
+   console.log(d);			
+
+//30. [9,4,27,6,3] => [9,4,0,6,3] /*
+	Answer - let arr=[9,4,27,6,3]
+		arr[2]=0;
+		console.log(arr);
+
+31. [10,20,30,40,50] => [20,10,30,50,40]
+	Answer - function reverse(arr, left, right) {
+    while (left < right) {
+        [arr[left], arr[right]] = [arr[right], arr[left]];
+        left++;  
+        right--;
+    }
+}
+
+let arr = [10, 20, 30, 40, 50];
+let mid=Math.floor((arr.length/2)-1);
+reverse(arr, 0, mid);
+reverse(arr,mid+1,arr.length-1)
+console.log(arr);
+
+
+
+32. [4,3,2,1,0] => [4,3,2,4,0]	
+	Answer - let arr=[4,3,2,1,0]
+			arr[arr.length-2]=4
+
+33. [6,6,6,6] [7,8,9,10] [6,7,8,10] => [6…………….10]  
+	Answer - let a=[6,6,6,6],b=[7,8,9,10],c=[6,7,8,10] 
+let arr=new Set([...a,...b,...c]);
+console.log(arr);
+
+34. [“a”] [“b”][“c”] => “abc”
+	Answer - let a=['a'],b= ['b'],c=['c']
+let temp=a.concat(b,c);
+let str='';
+for(let i of temp){
+    str+=i;
+}
+console.log(str);
+
+
+
+35. [2,3,4,5] => [2,6,4,5]
+	Answer - let d=[2,3,4,5]
+			d[1]=6;
+			console.log(d);
+
+
+
+
+
+
+
+
+36. [4,5,6,7] => [‘45’,’67’]	/*	
+Answer - 	let arr=[4,5,6,7] 
+let newArr=[];
+let temp='';
+for(let i=0;i<arr.length;i++){
+    temp+=arr[i];
+    if(temp.length===2){
+        newArr.push(temp);
+        temp='';
+    }
+}
+console.log(newArr);
+		
+37. [4,5,6,7,8,9] => [‘45’,’67’,’89’]	/*
+
+38. [7,8,9,10,11,12] => [12,7,8,9,10,11]
+	Answer - let temp=arr.pop();
+arr.unshift(temp);
+console.log(arr);
+
+
+39. [3,2,1,0,-1,-2] => Add these number	
+	Answer - let sum=0;
+		   for(let i of d) sum+=i;
+			console.log(sum);
+
+40. [1,2,3] => [1,2,3,4]	
+	Answer - d.push(d.length+1);
+   console.log(d);
+
+41.[‘abc’,’xyz’,’pqr’] => [‘abc’,’pqr’,’xyz’] 
+	Answer - [d[1],d[2]]=[d[2],d[1]];
+
+42. [3,2,1,0] =>even|odd=>[0,2,1,3]	
+	Answer - let evenArr=[],oddArr=[];
+for(let i=0;i<arr.length;i++){
+    if(arr[i]%2==0){
+        evenArr.push(arr[i]);
+    }
+    else{
+        oddArr.push(arr[i]);
+    }
+}
+
+evenArr.sort();
+oddArr.sort();
+evenArr=[...evenArr,...oddArr];
+console.log(evenArr);
+
+43.[‘I’,’AM’,’DEV’] => [‘I’ ,’AM’,’DEVELOPER’]
+	Answer - d[2]=’DEVELOPER’	;
+		console.log(d);
+
+44. ‘A B C D’ => [‘AB’ ,’CD’]	
+	Answer - let str = 'A B C D';
+let stringWithoutSpaces = str.replace(/\s/g, '');
+let newArr=[];
+let temp='';
+for(let i=0;i<stringWithoutSpaces.length;i++){
+    temp+=stringWithoutSpaces[i];
+    if(temp.length===2){
+        newArr.push(temp);
+        temp='';
+    }
+}
+console.log(newArr);
+
+
+
+45. “SOFTOPS” => S OO FFF TTTT OOOO…..
+	Answer - let str='';
+for(let i=0;i<d.length;i++){
+    		str+=d[i].repeat(i+1)+" ";
+}
+console.log(str);
+
+46. “ABC” [D,E,F] => “ABCDEF”	
+	Answer - let a='ABC';
+let b= ['D','E','F']
+a=a.concat(b.join(""));
+console.log(a);
+
+
+
+47. “JAVA” “SCRIPT” => SCRIPT JAVA SCRIPT
+	Answer - console.log(“SCRIPT” + “JAVA” + “SCRIPT”);
+
+48. “MAN” => “NAM”
+	Answer - let d="MAN";
+d=d.split("").reverse().join("");
+console.log(d);
+
+49.  ABBA =>TRUE
+	Answer - let d= "ABCA";
+
+function checkPalin(str){
+    for(let i=0;i<str.length/2;i++){
+        if(str[i]!=str[str.length-i-1])
+        return false;
+    }
+    return true;
+}
+
+console.log(checkPalin(d));
+
+50. 0 1 22 333 4444 55555	
+	Answer -  for(let i=0;i<=5;i++){
+    			if(i==0){
+        			console.log(i);
+    			}
+  		  else{
+        			console.log(i.toString().repeat(i));
+   		 }
+}
+
+51. let obj ={ abc:’abc’}  => value of abc key.
+	Answer - console.log(obj.abc);
+
+52 let  obj ={ abc: 1}  => value of abc key.
+	Answer - console.log(obj.abc);
+
+53. let obj ={ abc:’abcd’}  => value of abc key.
+	Answer - console.log(obj.abc);
+
+54. let obj ={ abc:’abc’, xyz:’abc’}  => value abc.	
+Answer - console.log(obj.abc);
+	
+55. let obj ={ abc:’xyz’, xyz:’xyz’}  => { abc:’xyzabc’}//
+	Answer - 
+
+56. let obj ={ a:1, b:2, c:3}  => {a:1,b:4,c:9 }
+Answer - obj.b=4;
+	 	
+57. let obj ={ a:1, b:2, c:3}  => [a,b,c]	
+Answer - console.log(Object.keys(obj));
+			
+58. let obj ={ a:1, b:2, c:3}  => [1,2,3]	
+Answer - console.log(Object.values(obj));
+
+59. let obj ={ a:2, b:3, c:4}  => value of c key.	
+	Answer - console.log(obj.c);
+
+60. let obj ={ a:1, b:2, c:3}  => 2*3=6
+	Answer - console.log(obj.b*obj.c);
+
+61. let obj ={ a:1}, let obj2 ={p:2} => { a:1,p:2 }
+Answer - let fobj={
+    	...obj,
+   	 ...obj2
+}
+console.log(fobj);
+	 			
+62. let obj ={ a:1, b:2}  =>  {a:1},{b:2}	
+Answer - 		
+		
+63. let obj ={ a:1,  c:3}  => {a:3,c:9}	
+Answer - obj.a=3;
+  obj.c=9;
+console.log(obj)	
+
+64. let obj ={ a:1,  c:3}  => Delete {a:1}	
+	Answer - delete(obj.a);
+
+65. let obj ={ a:1}  => {a:’1 abc’}//
+	Answer - obj.a=obj.a+' abc';
+
+66. let obj ={ a:[1,2,3]}  => {a:[1,a,3]}	 
+Answer - obj.a[1]='a';
+   console.log(obj);
+			
+
+
+67. let obj ={ a:[1,2,3], b:[3,4,5]}  => {a:[1,2,a],b:[3,4,b]}
+	Answer - obj.a[2]='a' ; obj.b[2]='b';
+   console.log(obj);
+
+
+68. let obj ={ a:[1,1,1], b:[2,2,2]}  =>  
+{a:[1,1,1], b:[2,2,2], c:[3,3,3],d:[4,4,4], e:[5,5,5]}.
+	Answer - let obj = {a: [1, 1, 1], b: [2, 2, 2]};
+
+for (let i = 3; i <= 5; i++) {
+  obj[String.fromCharCode(96 + i)] = [i, i, i];
+}
+
+console.log(obj);
+
+
+			
+69. let obj ={ a:’abc’,b:[1,1,1]}  => { b:[1,1,1,abc]}.
+Answer - obj.b.push(obj.a);
+delete(obj.a);
+console.log(obj);
+		
+70. let obj ={ a:[1,2,3], b:[3,4,5]}  => index of 5		
+	Answer - function check(num){
+    		    return num===5;
+}
+console.log(obj.b.findIndex(check));
+
+
+71. let obj ={ b:[3,4,5]}   => { b:[60]}.			
+Answer - let productValues= Object.values(obj.b);
+let product=productValues.reduce((acc,current)=>acc*current,1);
+obj.b=[product];
+console.log(obj);
+
+72. let obj ={ a:2 b:[3,4,5]}  => index of 4 in b.
+Answer - function check(num){
+    		    return num===4;
+}
+console.log(obj.b.findIndex(check);
+
+		
+73. let obj ={ soft:’top’}=> soft-top.
+Answer - for(let i in obj){
+    	console.log(i+"-"+obj[i]);
+}
+			
+74. let obj ={ a:[1,2,3], b:[3,4,5], c:[8,9,10]}  => {a:[8,9,10],b:[3,4,5], c:[1,2,3]}.	
+	Answer - [obj.a,obj.c]=[obj.c,obj.a]
+    console.log(obj);
+
+75. let obj ={ a:[1,2,3,4,5] > {a:‘1,2,3,4,5’}	
+	Answer - obj.a=ob.a.join(“,”);
+
+
+
+
+
+
+
+
+----Use this Object---- 76,77,78,79,80,81,82,83
+let obj ={
+	abc:[
+  	{id:1,abc:1,xyz:2},
+         {id:2,abc:2,xyz:3}
+ 	]
+  }
+
+76.Update value xyz=3. Where id=1.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id==1){
+        elem.xyz=3
+    }
+})
+
+console.log(obj);
+
+77.Update value abc=3. Where id=2.	
+Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id==2){
+        elem.abc=3
+    }
+})
+
+console.log(obj);
+			
+78.Update value abc=”ABC” Where xyz=3.	
+Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.xyz==3){
+        elem.abc="ABC"
+    }
+})
+
+console.log(obj);
+	
+79. Add an item {id:3,abc:5,xyz:7}.
+Answer - obj.abc.push({id:3,abc:5,xyz:7})
+  console.log(obj);
+			
+
+80. Add an item {id:4,abc:5,xyz:7,value:4}.	
+Anwer - obj.abc.push({id:4,abc:5,xyz:7,value:4})
+  console.log(obj);
+		
+81. Delete an item where abc=2.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.abc==2){
+        delete(obj.abc.splice(index,1));
+    }
+})
+
+console.log(obj);
+				
+82. Delete an item where id=2.	
+Answer - Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id==2){
+        delete(obj.abc.splice(index,1));
+    }
+})
+
+console.log(obj);	
+			
+83. Add another key xyz: with the same value of abc.
+	Answer - obj.xyz=obj.abc;
+   console.log(obj);
+
+84.let obj ={
+	abc:[
+  	{id:1,name:'Rohit',age:26},
+  	{id:2,name:'rituraj',age:25},
+  	{id:3,name:'gaurav',age:18}
+ 	]
+  }
+
+85. Add new item {id:4,name:'abc',age:25}
+	Answer - obj.abc.push({id:4,name:'abc',age:25});
+
+86. Print obj with id=2.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id===2){
+        console.log(elem);
+    }
+})
+
+
+
+
+
+87. Print name where id=3.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id===3){
+        console.log(elem.name);
+    }
+})
+
+
+88. Print name where age>20.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.age>20){
+        console.log(elem.name);
+    }
+})
+
+89. Print age where id=3.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id===3){
+        console.log(elem.age);
+    }
+})
+
+90. Update the age 30 where name is Gaurav.
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.name==='Gaurav'){
+       elem.age=30
+    }
+})
+console.log(obj);
+
+91. Update the name Rituraj Mandloi where id=1
+	Answer - obj.abc.forEach((elem,index)=>{
+    if(elem.id===1){
+       elem.name=’Rituraj Mandloi’
+    }
+})
+console.log(obj);
+
+92. Insert an item {id:4,abc:5,xyz:7,value:4} in the   starting of the array.	
+Answer - obj.abc.unshift({id:4,name:'abc',age:25});
+
+93. Delete the key age from each item.
+Answer- obj.abc.forEach((elem,index)=>{
+    elem=delete(elem.age);
+})
+console.log(obj);
+		
+
+94. Insert any new item at the random index of the array. 
+	Answer - let rIndex=(Math.floor(Math.random()*obj.abc.length)+1);
+    obj.abc[rIndex]={id:4,abc:5,xyz:7,value:4};
+
+
+95. Using map function try to print the name.
+Answer - obj.abc.map((elem,index)=>{
+   console.log(elem.name)
+})
+	
+96. Using map function copy item where id=2.
+	Answer - let obj1={};
+
+obj.abc.map((elem,index)=>{
+    if(elem.id===2){
+        obj1=elem;
+    }
+})
+
+console.log(obj1)
+
+97. Using map function, copy each item to a different array.
+	Answer - let arr=[];
+
+obj.abc.map((elem,index)=>{
+    arr.push(elem);
+})
+
+console.log(arr)
+
+let obj ={
+	abc:[
+  	{id:1,name:'Santa’,age:26},
+  	{id:2,name:'banta',age:25},
+  	{id:3,name:'bhad me jaye janta',age:18}
+ 	],
+  	xyz:[
+  	{id:4,name:'Hum',age:26},
+  	{id:5,name:'tum',age:25}
+ 	]
+
+  }
+                  
+99. Fill the remaining item xyz of abc, abc of xyz. 	
+	Answer - let temp=obj.abc
+obj.abc=[...obj.abc,...obj.xyz];
+obj.xyz=[...obj.xyz,...temp];
+console.log(obj);
+
+100. Delete an item where id=5.	
+Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.id===5){
+            obj[i].splice(index,1);
+        }
+    })
+}
+console.log(obj);
+				
+
+
+101. Delete an item where name=’hum’.	
+Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.name==='hum'){
+             obj[i].splice(index,1);
+        }
+    })
+}
+console.log(obj);
+		
+102. Delete an item where id=2.
+Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.id===2){
+            obj[i].splice(index,1);
+        }
+    })
+}
+console.log(obj);
+
+				
+103. Delete an item where id>2.
+Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.id>2){
+            obj[i].splice(index,1);
+        }
+    })
+}
+console.log(obj);
+
+				
+
+
+
+104. Update an item name to pqr where id =3.
+Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.id===3){
+            elem.name='pqr'
+        }
+    })
+}
+console.log(obj);
+	
+
+
+105. Update an item name to pqr where id >3.
+	Answer - for(let i in obj){
+    obj[i].forEach((elem,index)=>{
+        if(elem.id>3){
+            elem.name='pqr'
+        }
+    })
+}
+console.log(obj);
+
+		
+106. Add an item {id:6,name:’Upr Ja’,age:2} in xyz key array.
+	Answer - obj.xyz.push({id:6,name:'Upr Ja',age:2})
+console.log(obj);
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
